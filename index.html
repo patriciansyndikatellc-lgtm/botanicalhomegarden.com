@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Gardening Where You Are — The American Home Gardener's Handbook</title>
-<meta name="description" content="American regional gardening advice for all fifty states, zone by zone. Every recommendation traced to university Cooperative Extension research. By L. H. Smith, PhD." />
+<meta name="description" content="American regional gardening advice for all fifty states, zone by zone. Every recommendation traced to university Cooperative Extension research. By L. H. Smith." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -97,7 +97,7 @@
   .ext-list{font-family:var(--sans);font-size:14.5px;color:var(--sage);text-align:center;margin-top:42px;line-height:2;letter-spacing:.3px;}
 
   /* article cards */
-  .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;} @media(max-width:860px){.card-grid{grid-template-columns:1fr;}}
   .acard{background:var(--paper);border:1px solid var(--rule);border-radius:6px;overflow:hidden;cursor:pointer;transition:transform .16s ease,box-shadow .16s ease;display:flex;flex-direction:column;}
   .acard:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(30,51,42,.12);}
   .acard .thumb{height:130px;}
@@ -193,7 +193,6 @@
     <button class="nav-toggle" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <nav class="nav-links" id="navlinks">
       <a onclick="go('home')" data-nav="home">Home</a>
-      <a onclick="go('about')" data-nav="about">About</a>
       <a onclick="go('articles')" data-nav="articles">Free Articles</a>
       <a class="btn btn-primary" onclick="go('home');setTimeout(()=>document.getElementById('buy').scrollIntoView({behavior:'smooth'}),40)">Get the Book</a>
     </nav>
@@ -217,7 +216,7 @@
         <a class="btn btn-primary" onclick="go('home');setTimeout(()=>document.getElementById('buy').scrollIntoView({behavior:'smooth'}),40)">Get the PDF</a>
         <a class="btn btn-ghost" onclick="go('articles')">Read a free article</a>
       </div>
-      <p class="microcred">Written by L. H. Smith, PhD (Botany) · Sourced to Iowa State, Clemson, Penn State, Cornell, Colorado State & more</p>
+      <p class="microcred">Written by L. H. Smith · Sourced to Iowa State, Clemson, Penn State, Cornell, Colorado State & more</p>
 
       <div class="zone-hero" style="margin-top:40px;">
         <div class="zone-hero-cap">Hover the map you were never given: the 13 USDA hardiness zones, coldest to warmest.</div>
@@ -345,7 +344,7 @@
           <p>The full 267-page PDF — all fifty states, every zone, delivered instantly and yours to keep. Read it on any device, print the pages you need, and open it every season for the rest of your gardening life.</p>
         </div>
         <div class="buy-side">
-          <div class="price">$29<small>One-time · PDF download</small></div>
+          <div class="price">$19.99<small>One-time · PDF download</small></div>
           <a class="btn btn-light" href="https://lhsmith.gumroad.com/l/vbtkoi">Buy &amp; download the PDF</a>
           <div class="guarantee">Instant download · 30-day money-back guarantee</div>
         </div>
@@ -354,58 +353,14 @@
   </section>
 </main>
 
-<!-- ================= ABOUT ================= -->
+<!-- ================= ABOUT (redirects to home) ================= -->
 <div id="about" class="view">
-  <section class="band" style="background:var(--cream);">
-    <div class="wrap about-hero">
-      <div class="portrait"><div class="initials">LS</div></div>
-      <div>
-        <div class="eyebrow">About the author</div>
-        <h1>L. H. Smith, PhD</h1>
-        <div class="about-role">Botanist · Oregon</div>
-        <p class="lede" style="font-size:19px;color:var(--forest-dark);max-width:60ch;">I spent a career studying how plants actually respond to the places they grow — and then wrote the reference I always wished American gardeners had.</p>
-        <div class="cred-chips">
-          <span class="chip">PhD, Botany</span>
-          <span class="chip">41 international publications</span>
-          <span class="chip">Based in Oregon</span>
-          <span class="chip">Zones 1–13</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="band">
-    <div class="narrow about-body">
-      <h3>The short version</h3>
-      <p>I'm a botanist based in Oregon with a doctorate in botany and forty-one peer-reviewed papers published in international journals. For years my work lived in the technical literature — precise, rigorous, and almost entirely invisible to the people who spend their weekends actually growing things.</p>
-      <p>This book is an attempt to close that gap: to take the science that universities have quietly been publishing for a century and turn it into advice a gardener in any state can open, understand, and use that afternoon.</p>
-
-      <h3>Why I wrote it</h3>
-      <p>The gardening books people love most were, for the most part, written for someone else's weather. Their advice is real — for the climate it was written in. Carried across an ocean or a continent, it fails slowly and confusingly, and the gardener blames themselves.</p>
-      <p>Meanwhile, the best gardening information in America is already written, already free, and almost nobody reads it: the Cooperative Extension services at land-grant universities publish rigorous, region-specific guidance for their own states. It's scattered across hundreds of PDFs and buried under academic language. I gathered it, checked it, translated it into plain English, and organized it the way the country actually divides — by zone, by region, by soil.</p>
-
-      <div class="callout">
-        <div class="callout-h">The rule I wrote by</div>
-        Every claim that a plant lives or dies on is traced back to a university's published research. If I couldn't source it, it didn't go in the book.
-      </div>
-
-      <h3>How the book sounds</h3>
-      <p>Like a knowledgeable friend leaning on your fence, not a textbook. I tend to name the mistake before the method — because understanding <em>why</em> something failed is what stops it from failing again. It's warm, direct, and written in the second person, for you and your specific patch of ground.</p>
-
-      <h3>Selected research &amp; writing</h3>
-      <p>A sample of my published work and general gardening writing. <span class="placeholder-note">Replace the links below with your own — I've left the structure ready.</span></p>
-      <ul class="link-list">
-        <li><span class="t">Peer-reviewed publication — journal title, year</span><a href="#">Read →</a></li>
-        <li><span class="t">Peer-reviewed publication — journal title, year</span><a href="#">Read →</a></li>
-        <li><span class="t">Peer-reviewed publication — journal title, year</span><a href="#">Read →</a></li>
-        <li><span class="t">General article — where it was published</span><a href="#">Read →</a></li>
-        <li><span class="t">General article — where it was published</span><a href="#">Read →</a></li>
-      </ul>
-
-      <div style="margin-top:40px;">
-        <a class="btn btn-primary" onclick="go('home');setTimeout(()=>document.getElementById('buy').scrollIntoView({behavior:'smooth'}),40)">Get the handbook</a>
-        <a class="btn btn-ghost" onclick="go('articles')" style="margin-left:10px;">Read the free articles</a>
-      </div>
+  <section class="band" style="background:var(--cream);text-align:center;padding:80px 0;">
+    <div class="wrap">
+      <div class="eyebrow">About</div>
+      <h1 style="font-size:36px;font-weight:700;margin:16px 0 20px;">Gardening Where You Are</h1>
+      <p style="font-size:19px;color:var(--text-light);max-width:52ch;margin:0 auto 30px;">A handbook by L. H. Smith — every recommendation traced to university Cooperative Extension research. Built for the country you actually garden in.</p>
+      <a class="btn btn-primary" onclick="go('home');setTimeout(()=>document.getElementById('buy').scrollIntoView({behavior:'smooth'}),40)">Get the handbook →</a>
     </div>
   </section>
 </div>
@@ -448,6 +403,60 @@
           <span class="read">Read article →</span>
         </div>
       </div>
+      <div class="acard" onclick="window.open('https://extension.umn.edu/garden-and-home/yard-and-garden/lawns-and-landscapes-in-minnesota/trees-and-shrubs/choosing-evergreens-for-your-landscape','_blank')">
+        <div class="thumb" id="thumb-evg" style="background:linear-gradient(135deg,#2C4A3B,#4A7A5A,#A9BC9E);"></div>
+        <div class="acard-body">
+          <div class="kicker">Trees &amp; Shrubs</div>
+          <h3>The Evergreen That Actually Fits Your Yard</h3>
+          <p>Wrong size, wrong site — most evergreen failures start at the nursery. A practical guide to choosing the right one for your zone and space.</p>
+          <span class="read">Read article → University of Minnesota Extension</span>
+        </div>
+      </div>
+      <div class="acard" onclick="window.open('https://extension.psu.edu/unusual-vegetables-for-the-home-garden','_blank')">
+        <div class="thumb" id="thumb-veg" style="background:linear-gradient(135deg,#C17845,#E4A55A,#F6D98A);"></div>
+        <div class="acard-body">
+          <div class="kicker">Vegetables</div>
+          <h3>Beyond Tomatoes: Vegetables Worth Growing</h3>
+          <p>Cucamelons, ground cherries, kohlrabi, tomatillos — a Penn State guide to the unusual vegetables that actually succeed in home gardens.</p>
+          <span class="read">Read article → Penn State Extension</span>
+        </div>
+      </div>
+      <div class="acard" onclick="window.open('https://extension.psu.edu/fragrant-trees-and-shrubs','_blank')">
+        <div class="thumb" id="thumb-frag" style="background:linear-gradient(135deg,#A9BC9E,#C6DCA0,#EEF2E9);"></div>
+        <div class="acard-body">
+          <div class="kicker">Trees &amp; Shrubs</div>
+          <h3>Trees and Shrubs That Fill a Garden With Scent</h3>
+          <p>Fragrance is an underused dimension of the home garden. Penn State's guide to the trees and shrubs worth planting for what you smell, not just what you see.</p>
+          <span class="read">Read article → Penn State Extension</span>
+        </div>
+      </div>
+      <div class="acard" onclick="window.open('https://extension.psu.edu/practical-tips-for-healthy-soil-in-a-home-garden','_blank')">
+        <div class="thumb" id="thumb-soilps" style="background:linear-gradient(135deg,#6E5A34,#A98C57,#C7B07A);"></div>
+        <div class="acard-body">
+          <div class="kicker">Soil</div>
+          <h3>Practical Tips for Healthy Soil</h3>
+          <p>What actually improves soil — and what doesn't. Penn State Extension's grounded, no-fuss guide to building the foundation every garden depends on.</p>
+          <span class="read">Read article → Penn State Extension</span>
+        </div>
+      </div>
+      <div class="acard" onclick="window.open('https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/mulching-for-soil-and-garden-health','_blank')">
+        <div class="thumb" id="thumb-mulch" style="background:linear-gradient(135deg,#8A7346,#C7B07A,#E0CE9A);"></div>
+        <div class="acard-body">
+          <div class="kicker">Technique</div>
+          <h3>Mulch Does More Than You Think</h3>
+          <p>Moisture, temperature, weeds, and soil health — mulch affects all four. University of Minnesota's guide to doing it right, by material and depth.</p>
+          <span class="read">Read article → University of Minnesota Extension</span>
+        </div>
+      </div>
+      <div class="acard" onclick="window.open('https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/water-wisely-start-in-your-own-backyard','_blank')">
+        <div class="thumb" id="thumb-waterwise" style="background:linear-gradient(135deg,#4A5B9E,#6E9AC4,#A7CBB5);"></div>
+        <div class="acard-body">
+          <div class="kicker">Water</div>
+          <h3>Water Wisely, Starting in Your Own Backyard</h3>
+          <p>How to cut water use without losing your garden. Minnesota Extension's practical guide to smarter irrigation habits for home gardeners.</p>
+          <span class="read">Read article → University of Minnesota Extension</span>
+        </div>
+      </div>
     </div>
   </section>
 </div>
@@ -459,7 +468,7 @@
       <span class="back" onclick="go('articles')">← All articles</span>
       <div class="eyebrow">Climate & Zones</div>
       <h1>Your Hardiness Zone Is Only Half the Map</h1>
-      <div class="meta">By L. H. Smith, PhD · About a 6-minute read</div>
+      <div class="meta">By L. H. Smith · About a 6-minute read</div>
       <div class="article-body">
         <p>If you've ever bought a plant online, you've met the USDA hardiness zone. It's the number on the tag, the thing the nursery asks for, the reason a plant is labeled "hardy to zone 5." Most American gardeners can tell you their zone. Far fewer can tell you what it actually promises — and almost none know about the second map that matters just as much.</p>
 
@@ -529,7 +538,7 @@
       <span class="back" onclick="go('articles')">← All articles</span>
       <div class="eyebrow">Soil</div>
       <h1>The Soil Test That Prevents Most Failures</h1>
-      <div class="meta">By L. H. Smith, PhD · About a 6-minute read</div>
+      <div class="meta">By L. H. Smith · About a 6-minute read</div>
       <div class="article-body">
         <p>Here is the least glamorous, highest-return thing you can do as a gardener, and hardly anyone does it: send a cup of your dirt to a laboratory before you plant. For a small fee, a soil test turns the invisible half of your garden — the part doing most of the work — into a page of numbers you can actually act on.</p>
 
@@ -592,7 +601,7 @@
       <span class="back" onclick="go('articles')">← All articles</span>
       <div class="eyebrow">Technique</div>
       <h1>Water Deeply, Not Often</h1>
-      <div class="meta">By L. H. Smith, PhD · About a 5-minute read</div>
+      <div class="meta">By L. H. Smith · About a 5-minute read</div>
       <div class="article-body">
         <p>Most people water their gardens the way they'd want to be watered: a little, often, especially when it's hot. It feels caring. It's also, for established plants, close to the worst thing you can do — and the reason so many gardens wilt the moment someone goes away for a week.</p>
 
@@ -652,12 +661,11 @@
     <div class="foot-grid">
       <div style="max-width:300px;">
         <div class="foot-brand">Gardening <span>Where You Are</span></div>
-        <p style="margin-top:12px;line-height:1.6;">American regional gardening, zone by zone — every claim traced to university research. By L. H. Smith, PhD.</p>
+        <p style="margin-top:12px;line-height:1.6;">American regional gardening, zone by zone — every claim traced to university research. By L. H. Smith.</p>
       </div>
       <div class="foot-col">
         <h5>Explore</h5>
         <a onclick="go('home')">Home</a>
-        <a onclick="go('about')">About the author</a>
         <a onclick="go('articles')">Free articles</a>
         <a onclick="go('home');setTimeout(()=>document.getElementById('buy').scrollIntoView({behavior:'smooth'}),40)">Get the book</a>
       </div>
