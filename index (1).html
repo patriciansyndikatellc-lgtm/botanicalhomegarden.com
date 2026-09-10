@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gardening Where You Are — The American Home Gardener's Handbook</title>
+<meta name="description" content="American regional gardening advice for all fifty states, zone by zone. Every recommendation traced to university Cooperative Extension research. By L. H. Smith." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --forest:#2C4A3B; --forest-dark:#1E332A; --forest-deep:#16261F;
+    --terracotta:#C17845; --terracotta-dark:#A15E32;
+    --sage:#A9BC9E; --sage-tint:#EEF2E9;
+    --cream:#F6F1E4; --paper:#FFFEFB;
+    --text:#292824; --text-light:#6B6A63; --rule:#DCD6C4;
+    --serif:'Lora',Georgia,serif;
+    --sans:'Poppins',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--text);font-family:var(--serif);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:var(--serif);color:var(--forest);line-height:1.12;margin:0;}
+  a{color:var(--terracotta-dark);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+  .narrow{max-width:720px;margin:0 auto;padding:0 28px;}
+  .eyebrow{font-family:var(--sans);font-size:12px;letter-spacing:3.5px;text-transform:uppercase;font-weight:600;color:var(--terracotta-dark);}
+  .btn{display:inline-block;font-family:var(--sans);font-weight:600;font-size:15px;letter-spacing:.3px;padding:14px 26px;border-radius:3px;cursor:pointer;border:none;transition:transform .15s ease,background .15s ease;}
+  .btn-primary{background:var(--terracotta);color:#fff;}
+  .btn-primary:hover{background:var(--terracotta-dark);text-decoration:none;transform:translateY(-1px);}
+  .btn-ghost{background:transparent;color:var(--forest);border:1.5px solid var(--forest);}
+  .btn-ghost:hover{background:var(--forest);color:#fff;text-decoration:none;}
+  .btn-light{background:var(--cream);color:var(--forest-dark);}
+  .btn-light:hover{background:#fff;text-decoration:none;transform:translateY(-1px);}
+
+  /* ---------- NAV ---------- */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(255,254,251,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px;}
+  .brand{font-family:var(--serif);font-weight:700;font-size:19px;color:var(--forest);letter-spacing:.2px;cursor:pointer;}
+  .brand span{color:var(--terracotta);}
+  .nav-links{display:flex;gap:30px;align-items:center;}
+  .nav-links a{font-family:var(--sans);font-weight:500;font-size:14.5px;color:var(--text);letter-spacing:.2px;cursor:pointer;}
+  .nav-links a:hover,.nav-links a.active{color:var(--terracotta-dark);text-decoration:none;}
+  .nav-links .btn{padding:9px 18px;font-size:13.5px;}
+  .nav-toggle{display:none;background:none;border:none;font-size:26px;color:var(--forest);cursor:pointer;}
+
+  /* ---------- ZONE BAND (signature) ---------- */
+  .zoneband{display:flex;width:100%;height:14px;border-radius:3px;overflow:hidden;}
+  .zoneband .z{flex:1;}
+  .zone-strip{margin:0;}
+  .zone-interactive{display:flex;width:100%;border-radius:4px;overflow:hidden;border:1px solid rgba(0,0,0,.06);}
+  .zone-interactive .z{flex:1;height:44px;display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-weight:600;font-size:12px;color:rgba(0,0,0,.45);cursor:default;transition:transform .12s ease;position:relative;}
+  .zone-interactive .z:hover{transform:scaleY(1.18);z-index:2;color:rgba(0,0,0,.7);}
+  .zone-label{font-family:var(--sans);font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--text-light);display:flex;justify-content:space-between;margin-top:8px;}
+
+  /* ---------- HERO ---------- */
+  .hero{background:var(--cream);padding:76px 0 64px;position:relative;overflow:hidden;}
+  .hero .wrap{position:relative;z-index:2;}
+  .hero h1{font-size:56px;font-weight:700;margin:20px 0 20px;max-width:15ch;}
+  .hero .lede{font-size:20px;color:var(--forest-dark);max-width:52ch;margin-bottom:30px;}
+  .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:38px;}
+  .hero .microcred{font-family:var(--sans);font-size:13.5px;color:var(--text-light);margin-top:4px;}
+  .hero-leaf{position:absolute;right:-60px;top:-40px;width:420px;opacity:.5;z-index:1;pointer-events:none;}
+  .zone-hero{max-width:560px;}
+  .zone-hero-cap{font-family:var(--sans);font-size:13px;color:var(--text-light);margin-bottom:9px;}
+
+  /* ---------- SECTIONS ---------- */
+  section.band{padding:74px 0;}
+  section.dark{background:var(--forest-dark);color:var(--cream);}
+  section.dark h2,section.dark h3{color:#fff;}
+  section.dark .eyebrow{color:var(--sage);}
+  .section-head{max-width:640px;margin-bottom:42px;}
+  .section-head h2{font-size:38px;font-weight:700;margin:14px 0 16px;}
+  .section-head p{font-size:19px;color:var(--text-light);margin:0;}
+  section.dark .section-head p{color:var(--sage);}
+
+  /* gap / quote */
+  .gap-quote{font-size:27px;line-height:1.42;font-weight:500;color:var(--forest);max-width:22ch;}
+  .gap-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center;}
+  .gap-body p{margin:0 0 18px;}
+  .gap-body p:last-child{margin-bottom:0;}
+
+  /* feature list */
+  .features{display:grid;grid-template-columns:repeat(2,1fr);gap:30px 46px;}
+  .feature{display:flex;gap:16px;}
+  .feature .ico{flex-shrink:0;width:42px;height:42px;color:var(--terracotta);}
+  .feature h4{font-family:var(--sans);font-size:16.5px;font-weight:600;color:var(--forest);margin-bottom:5px;}
+  .feature p{margin:0;font-size:16px;color:var(--text-light);line-height:1.55;}
+
+  /* credibility stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;margin-top:8px;}
+  .stat .n{font-family:var(--serif);font-weight:700;font-size:52px;color:var(--sage);line-height:1;}
+  .stat .l{font-family:var(--sans);font-size:13.5px;letter-spacing:.5px;color:var(--cream);margin-top:10px;opacity:.85;}
+  .ext-list{font-family:var(--sans);font-size:14.5px;color:var(--sage);text-align:center;margin-top:42px;line-height:2;letter-spacing:.3px;}
+
+  /* article cards */
+  .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;} @media(max-width:860px){.card-grid{grid-template-columns:1fr;}}
+  .acard{background:var(--paper);border:1px solid var(--rule);border-radius:6px;overflow:hidden;cursor:pointer;transition:transform .16s ease,box-shadow .16s ease;display:flex;flex-direction:column;}
+  .acard:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(30,51,42,.12);}
+  .acard .thumb{height:130px;}
+  .acard .acard-body{padding:22px 22px 24px;flex:1;display:flex;flex-direction:column;}
+  .acard .kicker{font-family:var(--sans);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--terracotta-dark);font-weight:600;margin-bottom:9px;}
+  .acard h3{font-size:20px;font-weight:600;margin-bottom:9px;line-height:1.2;}
+  .acard p{font-size:15px;color:var(--text-light);margin:0 0 16px;flex:1;}
+  .acard .read{font-family:var(--sans);font-size:13.5px;font-weight:600;color:var(--terracotta-dark);}
+
+  /* buy band */
+  .buy{background:var(--terracotta);color:#fff;border-radius:8px;padding:52px 48px;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;}
+  .buy h2{color:#fff;font-size:34px;font-weight:700;margin-bottom:12px;}
+  .buy p{margin:0;font-size:17px;opacity:.95;line-height:1.55;}
+  .buy .price{font-family:var(--serif);font-weight:700;font-size:46px;color:#fff;line-height:1;}
+  .buy .price small{font-family:var(--sans);font-size:15px;font-weight:500;opacity:.85;display:block;margin-top:6px;letter-spacing:.3px;}
+  .buy .buy-side{text-align:center;}
+  .buy .buy-side .btn{margin-top:20px;width:100%;}
+  .buy .guarantee{font-family:var(--sans);font-size:12.5px;opacity:.85;margin-top:12px;}
+
+  /* ---------- ABOUT ---------- */
+  .about-hero{display:grid;grid-template-columns:300px 1fr;gap:52px;align-items:start;}
+  .portrait{width:300px;height:360px;border-radius:6px;background:var(--forest);position:relative;overflow:hidden;flex-shrink:0;}
+  .portrait .initials{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:700;font-size:96px;color:var(--sage);}
+  .about-hero h1{font-size:44px;font-weight:700;margin-bottom:8px;}
+  .about-role{font-family:var(--sans);font-size:15px;letter-spacing:1px;color:var(--terracotta-dark);text-transform:uppercase;font-weight:600;margin-bottom:22px;}
+  .about-body{max-width:760px;}
+  .about-body h3{font-size:24px;font-weight:600;margin:38px 0 12px;}
+  .about-body p{margin:0 0 18px;}
+  .cred-chips{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 4px;}
+  .chip{font-family:var(--sans);font-size:13.5px;font-weight:500;background:var(--sage-tint);color:var(--forest-dark);padding:8px 15px;border-radius:20px;border:1px solid var(--sage);}
+  .link-list{list-style:none;padding:0;margin:14px 0 0;}
+  .link-list li{padding:15px 0;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;align-items:baseline;gap:18px;font-family:var(--sans);font-size:15.5px;}
+  .link-list li .t{color:var(--text);}
+  .placeholder-note{font-family:var(--sans);font-size:13px;font-style:normal;color:#B08968;background:#FBF3E9;border:1px dashed #D9B48F;border-radius:4px;padding:3px 9px;}
+
+  /* ---------- ARTICLE PAGE ---------- */
+  .article{padding:56px 0 40px;}
+  .article .back{font-family:var(--sans);font-size:14px;font-weight:500;color:var(--terracotta-dark);cursor:pointer;display:inline-block;margin-bottom:26px;}
+  .article h1{font-size:42px;font-weight:700;line-height:1.12;margin:14px 0 16px;max-width:20ch;}
+  .article .meta{font-family:var(--sans);font-size:13.5px;color:var(--text-light);letter-spacing:.3px;margin-bottom:34px;}
+  .article-body{font-size:19px;line-height:1.72;}
+  .article-body p{margin:0 0 22px;}
+  .article-body h2{font-size:27px;font-weight:600;margin:44px 0 14px;}
+  .article-body h3{font-size:21px;font-weight:600;margin:30px 0 10px;color:var(--terracotta-dark);font-family:var(--sans);}
+  .article-body ul{margin:0 0 22px;padding-left:24px;}
+  .article-body li{margin-bottom:10px;}
+  .article-body strong{color:var(--forest);}
+  .figure{margin:32px 0;background:var(--cream);border-radius:6px;padding:26px;}
+  .figure figcaption{font-family:var(--sans);font-size:13.5px;color:var(--text-light);margin-top:14px;text-align:center;}
+  .callout{background:var(--sage-tint);border-left:4px solid var(--terracotta);border-radius:0 4px 4px 0;padding:20px 24px;margin:30px 0;font-size:17px;}
+  .callout .callout-h{font-family:var(--sans);font-weight:600;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--forest);margin-bottom:8px;}
+  .article-cta{background:var(--forest-dark);color:var(--cream);border-radius:6px;padding:34px 36px;margin:44px 0 10px;}
+  .article-cta h3{color:#fff;font-family:var(--serif);font-size:23px;font-weight:600;margin-bottom:10px;}
+  .article-cta p{font-size:16px;color:var(--sage);margin-bottom:20px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--forest-deep);color:var(--sage);padding:52px 0 34px;font-family:var(--sans);font-size:14px;}
+  .foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;margin-bottom:34px;}
+  .foot-brand{font-family:var(--serif);font-weight:700;font-size:20px;color:#fff;}
+  .foot-brand span{color:var(--terracotta);}
+  footer a{color:var(--sage);}
+  footer a:hover{color:#fff;}
+  .foot-col h5{font-family:var(--sans);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cream);margin:0 0 12px;}
+  .foot-col a{display:block;margin-bottom:8px;cursor:pointer;}
+  .foot-bottom{border-top:1px solid rgba(169,188,158,.25);padding-top:22px;font-size:12.5px;opacity:.8;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+
+  .view{display:none;}
+  .view.active{display:block;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:860px){
+    .hero h1{font-size:40px;}
+    .gap-grid,.buy,.about-hero{grid-template-columns:1fr;gap:32px;}
+    .features,.card-grid,.stats{grid-template-columns:1fr;}
+    .stats{grid-template-columns:repeat(2,1fr);gap:34px;}
+    .portrait{width:100%;max-width:300px;}
+    .nav-links{display:none;position:absolute;top:66px;left:0;right:0;background:var(--paper);flex-direction:column;gap:0;padding:8px 0;border-bottom:1px solid var(--rule);}
+    .nav-links.open{display:flex;}
+    .nav-links a{padding:13px 28px;width:100%;}
+    .nav-links .btn{margin:10px 28px;text-align:center;}
+    .nav-toggle{display:block;}
+    .hero-leaf{display:none;}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;}}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="brand" onclick="go('home')">Gardening <span>Where You Are</span></div>
+    <button class="nav-toggle" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <a onclick="go('home')" data-nav="home">Home</a>
+      <a onclick="go('articles')" data-nav="articles">Free Articles</a>
+      <a onclick="go('contact')" data-nav="contact">Contact</a>
+      <a class="btn btn-primary" onclick="go('home');setTimeout(()=>document.getElementById('buy').scrollIntoView({behavior:'smooth'}),40)">Get the Book</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HOME ================= -->
+<main id="home" class="view active">
+
+  <section class="hero">
+    <svg class="hero-leaf" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+      <path d="M100 10C60 40 40 90 60 140c15 38 50 50 40 50-30 0-60-40-60-90 0-40 30-80 60-90z" fill="#A9BC9E"/>
+      <path d="M100 10c40 30 60 80 40 130-15 38-50 50-40 50 30 0 60-40 60-90 0-40-30-80-60-90z" fill="#8AA57E"/>
+      <path d="M100 20v170" stroke="#2C4A3B" stroke-width="2" opacity=".4"/>
+    </svg>
+    <div class="wrap">
+      <div class="eyebrow">All 50 States · Zone by Zone</div>
+      <h1>The gardening advice that changes at your state line.</h1>
+      <p class="lede">Most famous gardening books were written for one climate — usually a cool, mild, faraway one. This is a working handbook for the country you actually garden in: fifty states, every hardiness zone, every claim traced to your own state's university research.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" onclick="go('home');setTimeout(()=>document.getElementById('buy').scrollIntoView({behavior:'smooth'}),40)">Get the PDF</a>
+        <a class="btn btn-ghost" onclick="go('articles')">Read a free article</a>
+      </div>
+      <p class="microcred">Written by L. H. Smith · Sourced to Iowa State, Clemson, Penn State, Cornell, Colorado State & more</p>
+
+      <div class="zone-hero" style="margin-top:40px;">
+        <div class="zone-hero-cap">Hover the map you were never given: the 13 USDA hardiness zones, coldest to warmest.</div>
+        <div class="zone-interactive" id="zoneStrip"></div>
+        <div class="zone-label"><span>Zone 1 · −60°F</span><span>Zone 13 · +65°F</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE GAP -->
+  <section class="band">
+    <div class="wrap gap-grid">
+      <div>
+        <div class="eyebrow">The problem this book solves</div>
+        <p class="gap-quote">A hydrangea that thrives in Portland can die three winters running in Minneapolis — and the book on your shelf won't tell you why.</p>
+      </div>
+      <div class="gap-body">
+        <p>The gardening classics are beautiful, and most of them are wrong for you. They were written for temperate, even, forgiving climates. They don't account for a Texas August, a Dakota January, a Georgia summer that never cools at night, or a Rocky Mountain season measured in weeks.</p>
+        <p>American gardeners have never lacked inspiration. What they've lacked is a single reference that starts from a different question — not "what's beautiful?" but <strong>"what actually works where you live?"</strong></p>
+        <p>That's the whole book. Fifty states, organized the way the country really divides: by cold, by heat, by soil, by rainfall. Nothing borrowed from a climate you don't garden in.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INSIDE -->
+  <section class="band" style="background:var(--cream);">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">What's inside</div>
+        <h2>A complete reference, not a coffee-table book.</h2>
+        <p>267 pages across eight parts and fifty chapters — built to be opened at the page that matches your yard.</p>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18M12 3v18" stroke-linecap="round"/><circle cx="12" cy="12" r="9"/></svg>
+          <div><h4>Every hardiness zone covered</h4><p>USDA zones 1–13, plus the heat-zone map most books ignore — the one that decides whether a plant survives August, not just January.</p></div>
+        </div>
+        <div class="feature">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20h16M6 20V9l6-5 6 5v11" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 20v-6h4v6"/></svg>
+          <div><h4>Region-by-region growing guides</h4><p>The Southeast, the Mountain West, the Midwest, New England and more — each with its own soil story, calendar, and the mistakes gardeners make there.</p></div>
+        </div>
+        <div class="feature">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M4 8c0 4 3 6 8 6M20 8c0 4-3 6-8 6" stroke-linecap="round"/></svg>
+          <div><h4>Soil, tested and understood</h4><p>How to read a soil report, correct pH, and build fertility — the invisible half of gardening that decides everything above ground.</p></div>
+        </div>
+        <div class="feature">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2.5 6 6.5.5-5 4.2 1.6 6.3L12 17l-5.6 3 1.6-6.3-5-4.2 6.5-.5z" stroke-linejoin="round"/></svg>
+          <div><h4>Perennials that actually return</h4><p>Which plants come back year after year in your conditions — chosen for survival first, and beauty a close second.</p></div>
+        </div>
+        <div class="feature">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h8M8 17h5" stroke-linecap="round"/></svg>
+          <div><h4>Traceable to the source</h4><p>Load-bearing claims cite the university Cooperative Extension research behind them — the free public science your taxes already paid for.</p></div>
+        </div>
+        <div class="feature">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h10" stroke-linecap="round"/></svg>
+          <div><h4>Written to be used</h4><p>A warm, plain-spoken voice that names the mistake before the method — so you understand why, not just what.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDIBILITY (dark) -->
+  <section class="band dark">
+    <div class="wrap">
+      <div class="section-head" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+        <div class="eyebrow">Why you can trust it</div>
+        <h2>Every recommendation has a paper trail.</h2>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="n">50</div><div class="l">States covered</div></div>
+        <div class="stat"><div class="n">13</div><div class="l">Hardiness zones</div></div>
+        <div class="stat"><div class="n">10+</div><div class="l">Universities cited</div></div>
+        <div class="stat"><div class="n">267</div><div class="l">Pages</div></div>
+      </div>
+      <p class="ext-list">Iowa State · Clemson · Penn State · University of Minnesota · University of Maryland<br/>University of Missouri · Cornell · Rutgers · Colorado State · and more</p>
+    </div>
+  </section>
+
+  <!-- FREE ARTICLES TEASER -->
+  <section class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Start free</div>
+        <h2>Three things worth knowing before you plant anything.</h2>
+        <p>A taste of the book's approach — genuinely useful on their own, no purchase required.</p>
+      </div>
+      <div class="card-grid">
+        <div class="acard" onclick="openArticle('zones')">
+          <div class="thumb" id="thumb-zones"></div>
+          <div class="acard-body">
+            <div class="kicker">Climate & Zones</div>
+            <h3>Your Hardiness Zone Is Only Half the Map</h3>
+            <p>Everyone knows their cold zone. Almost no one knows their heat zone — and it's the one that kills plants in summer.</p>
+            <span class="read">Read article →</span>
+          </div>
+        </div>
+        <div class="acard" onclick="openArticle('soil')">
+          <div class="thumb" id="thumb-soil"></div>
+          <div class="acard-body">
+            <div class="kicker">Soil</div>
+            <h3>The Soil Test That Prevents Most Failures</h3>
+            <p>For about the price of two plants, your state lab will tell you why your last ones died. Almost no one does it.</p>
+            <span class="read">Read article →</span>
+          </div>
+        </div>
+        <div class="acard" onclick="openArticle('water')">
+          <div class="thumb" id="thumb-water"></div>
+          <div class="acard-body">
+            <div class="kicker">Technique</div>
+            <h3>Water Deeply, Not Often</h3>
+            <p>The most common watering habit is also the one that quietly guarantees shallow, fragile roots. Here's the fix.</p>
+            <span class="read">Read article →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUY -->
+  <section class="band" style="background:var(--cream);">
+    <div class="wrap">
+      <div class="buy" id="buy">
+        <div>
+          <h2>Get the complete handbook.</h2>
+          <p>The full 267-page PDF — all fifty states, every zone, delivered instantly and yours to keep. Read it on any device, print the pages you need, and open it every season for the rest of your gardening life.</p>
+        </div>
+        <div class="buy-side">
+          <div class="price">$19.99<small>One-time · PDF download</small></div>
+          <a class="btn btn-light" href="https://lhsmith.gumroad.com/l/vbtkoi">Buy &amp; download the PDF</a>
+          <div class="guarantee">Instant download · 30-day money-back guarantee</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= ABOUT (redirects to home) ================= -->
+<div id="about" class="view">
+  <section class="band" style="background:var(--cream);text-align:center;padding:80px 0;">
+    <div class="wrap">
+      <div class="eyebrow">About</div>
+      <h1 style="font-size:36px;font-weight:700;margin:16px 0 20px;">Gardening Where You Are</h1>
+      <p style="font-size:19px;color:var(--text-light);max-width:52ch;margin:0 auto 30px;">A handbook by L. H. Smith — every recommendation traced to university Cooperative Extension research. Built for the country you actually garden in.</p>
+      <a class="btn btn-primary" onclick="go('home');setTimeout(()=>document.getElementById('buy').scrollIntoView({behavior:'smooth'}),40)">Get the handbook →</a>
+    </div>
+  </section>
+</div>
+
+<!-- ================= ARTICLES INDEX ================= -->
+<div id="articles" class="view">
+  <section class="band" style="background:var(--cream);padding-bottom:44px;">
+    <div class="wrap">
+      <div class="eyebrow">Free articles</div>
+      <h1 style="font-size:44px;font-weight:700;margin:14px 0 14px;max-width:20ch;">Genuinely useful, whether or not you buy anything.</h1>
+      <p style="font-size:19px;color:var(--text-light);max-width:60ch;margin:0;">Each of these is drawn from the book's approach: start from the science, translate it into something you can do this weekend, and always point you back toward your own region.</p>
+    </div>
+  </section>
+  <section class="band" style="padding-top:44px;">
+    <div class="wrap card-grid">
+      <div class="acard" onclick="openArticle('zones')">
+        <div class="thumb" id="thumb-zones2"></div>
+        <div class="acard-body">
+          <div class="kicker">Climate & Zones</div>
+          <h3>Your Hardiness Zone Is Only Half the Map</h3>
+          <p>Everyone knows their cold zone. Almost no one knows their heat zone — and it's the one that kills plants in summer.</p>
+          <span class="read">Read article →</span>
+        </div>
+      </div>
+      <div class="acard" onclick="openArticle('soil')">
+        <div class="thumb" id="thumb-soil2"></div>
+        <div class="acard-body">
+          <div class="kicker">Soil</div>
+          <h3>The Soil Test That Prevents Most Failures</h3>
+          <p>For about the price of two plants, your state lab will tell you why your last ones died. Almost no one does it.</p>
+          <span class="read">Read article →</span>
+        </div>
+      </div>
+      <div class="acard" onclick="openArticle('water')">
+        <div class="thumb" id="thumb-water2"></div>
+        <div class="acard-body">
+          <div class="kicker">Technique</div>
+          <h3>Water Deeply, Not Often</h3>
+          <p>The most common watering habit is also the one that quietly guarantees shallow, fragile roots. Here's the fix.</p>
+          <span class="read">Read article →</span>
+        </div>
+      </div>
+      <div class="acard" onclick="window.open('https://extension.umn.edu/garden-and-home/yard-and-garden/lawns-and-landscapes-in-minnesota/trees-and-shrubs/choosing-evergreens-for-your-landscape','_blank')">
+        <div class="thumb" id="thumb-evg" style="background:linear-gradient(135deg,#2C4A3B,#4A7A5A,#A9BC9E);"></div>
+        <div class="acard-body">
+          <div class="kicker">Trees &amp; Shrubs</div>
+          <h3>The Evergreen That Actually Fits Your Yard</h3>
+          <p>Wrong size, wrong site — most evergreen failures start at the nursery. A practical guide to choosing the right one for your zone and space.</p>
+          <span class="read">Read article → University of Minnesota Extension</span>
+        </div>
+      </div>
+      <div class="acard" onclick="window.open('https://extension.psu.edu/unusual-vegetables-for-the-home-garden','_blank')">
+        <div class="thumb" id="thumb-veg" style="background:linear-gradient(135deg,#C17845,#E4A55A,#F6D98A);"></div>
+        <div class="acard-body">
+          <div class="kicker">Vegetables</div>
+          <h3>Beyond Tomatoes: Vegetables Worth Growing</h3>
+          <p>Cucamelons, ground cherries, kohlrabi, tomatillos — a Penn State guide to the unusual vegetables that actually succeed in home gardens.</p>
+          <span class="read">Read article → Penn State Extension</span>
+        </div>
+      </div>
+      <div class="acard" onclick="window.open('https://extension.psu.edu/fragrant-trees-and-shrubs','_blank')">
+        <div class="thumb" id="thumb-frag" style="background:linear-gradient(135deg,#A9BC9E,#C6DCA0,#EEF2E9);"></div>
+        <div class="acard-body">
+          <div class="kicker">Trees &amp; Shrubs</div>
+          <h3>Trees and Shrubs That Fill a Garden With Scent</h3>
+          <p>Fragrance is an underused dimension of the home garden. Penn State's guide to the trees and shrubs worth planting for what you smell, not just what you see.</p>
+          <span class="read">Read article → Penn State Extension</span>
+        </div>
+      </div>
+      <div class="acard" onclick="window.open('https://extension.psu.edu/practical-tips-for-healthy-soil-in-a-home-garden','_blank')">
+        <div class="thumb" id="thumb-soilps" style="background:linear-gradient(135deg,#6E5A34,#A98C57,#C7B07A);"></div>
+        <div class="acard-body">
+          <div class="kicker">Soil</div>
+          <h3>Practical Tips for Healthy Soil</h3>
+          <p>What actually improves soil — and what doesn't. Penn State Extension's grounded, no-fuss guide to building the foundation every garden depends on.</p>
+          <span class="read">Read article → Penn State Extension</span>
+        </div>
+      </div>
+      <div class="acard" onclick="window.open('https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/mulching-for-soil-and-garden-health','_blank')">
+        <div class="thumb" id="thumb-mulch" style="background:linear-gradient(135deg,#8A7346,#C7B07A,#E0CE9A);"></div>
+        <div class="acard-body">
+          <div class="kicker">Technique</div>
+          <h3>Mulch Does More Than You Think</h3>
+          <p>Moisture, temperature, weeds, and soil health — mulch affects all four. University of Minnesota's guide to doing it right, by material and depth.</p>
+          <span class="read">Read article → University of Minnesota Extension</span>
+        </div>
+      </div>
+      <div class="acard" onclick="window.open('https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/water-wisely-start-in-your-own-backyard','_blank')">
+        <div class="thumb" id="thumb-waterwise" style="background:linear-gradient(135deg,#4A5B9E,#6E9AC4,#A7CBB5);"></div>
+        <div class="acard-body">
+          <div class="kicker">Water</div>
+          <h3>Water Wisely, Starting in Your Own Backyard</h3>
+          <p>How to cut water use without losing your garden. Minnesota Extension's practical guide to smarter irrigation habits for home gardeners.</p>
+          <span class="read">Read article → University of Minnesota Extension</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= ARTICLE: ZONES ================= -->
+<div id="article-zones" class="view">
+  <article class="article">
+    <div class="narrow">
+      <span class="back" onclick="go('articles')">← All articles</span>
+      <div class="eyebrow">Climate & Zones</div>
+      <h1>Your Hardiness Zone Is Only Half the Map</h1>
+      <div class="meta">By L. H. Smith · About a 6-minute read</div>
+      <div class="article-body">
+        <p>If you've ever bought a plant online, you've met the USDA hardiness zone. It's the number on the tag, the thing the nursery asks for, the reason a plant is labeled "hardy to zone 5." Most American gardeners can tell you their zone. Far fewer can tell you what it actually promises — and almost none know about the second map that matters just as much.</p>
+
+        <h2>What the cold zone really tells you</h2>
+        <p>The USDA Plant Hardiness Zone Map divides the country by one number: the average annual <strong>extreme minimum temperature</strong> — roughly, how cold a typical winter's coldest night gets. Each zone is a 10°F band, and each splits into an "a" and "b" half. Zone 5b is milder than 5a by about five degrees on that coldest night.</p>
+        <p>That's genuinely useful. It's also narrower than people think. Your hardiness zone is a statement about winter survival and nothing else. It says a plant can probably live through your coldest night. It says nothing about whether it can live through your summer.</p>
+
+        <div class="figure">
+          <svg viewBox="0 0 640 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The 13 USDA hardiness zones as a cold-to-warm spectrum">
+            <g font-family="Poppins, sans-serif" font-size="11" font-weight="600" text-anchor="middle">
+              <rect x="0"   y="20" width="49" height="44" fill="#4A5B9E"/><text x="24" y="47" fill="#fff">1</text>
+              <rect x="49"  y="20" width="49" height="44" fill="#5B7BB4"/><text x="73" y="47" fill="#fff">2</text>
+              <rect x="98"  y="20" width="49" height="44" fill="#6E9AC4"/><text x="122" y="47" fill="#fff">3</text>
+              <rect x="147" y="20" width="49" height="44" fill="#86B6C9"/><text x="171" y="47" fill="#fff">4</text>
+              <rect x="196" y="20" width="49" height="44" fill="#A7CBB5"/><text x="220" y="47" fill="#3a3a3a">5</text>
+              <rect x="245" y="20" width="49" height="44" fill="#C6DCA0"/><text x="269" y="47" fill="#3a3a3a">6</text>
+              <rect x="294" y="20" width="49" height="44" fill="#E4E58C"/><text x="318" y="47" fill="#3a3a3a">7</text>
+              <rect x="343" y="20" width="49" height="44" fill="#F4D77A"/><text x="367" y="47" fill="#3a3a3a">8</text>
+              <rect x="392" y="20" width="49" height="44" fill="#F2B866"/><text x="416" y="47" fill="#3a3a3a">9</text>
+              <rect x="441" y="20" width="49" height="44" fill="#EC9455"/><text x="465" y="47" fill="#fff">10</text>
+              <rect x="490" y="20" width="49" height="44" fill="#E1704A"/><text x="514" y="47" fill="#fff">11</text>
+              <rect x="539" y="20" width="49" height="44" fill="#D24E42"/><text x="563" y="47" fill="#fff">12</text>
+              <rect x="588" y="20" width="52" height="44" fill="#B93838"/><text x="614" y="47" fill="#fff">13</text>
+              <text x="24" y="82" fill="#6B6A63" font-size="9" font-weight="500">−60°F</text>
+              <text x="614" y="82" fill="#6B6A63" font-size="9" font-weight="500">+65°F</text>
+              <text x="320" y="14" fill="#6B6A63" font-size="10" font-weight="600">COLDEST WINTER NIGHT, ON AVERAGE</text>
+            </g>
+          </svg>
+          <figcaption>The USDA map, in one strip: thirteen zones, each a 10°F step in how cold your worst night gets.</figcaption>
+        </div>
+
+        <h2>The map nobody hands you: heat</h2>
+        <p>In 1997 the American Horticultural Society published a companion map that answers the opposite question. The <strong>AHS Plant Heat-Zone Map</strong> divides the country by the average number of days each year the temperature climbs above 86°F — the point at which many plants begin to suffer real cellular heat stress. It runs from Zone 1 (less than one hot day a year) to Zone 12 (more than 210).</p>
+        <p>This is the number that explains a mystery every Southern and desert gardener knows: a plant rated "hardy to zone 5" that survives winter effortlessly and then collapses in August. It didn't freeze. It cooked. Its cold-hardiness was never the problem.</p>
+
+        <div class="callout">
+          <div class="callout-h">The two-number habit</div>
+          When a plant tag or catalog lists two ratings — say "USDA 5–9, AHS 9–2" — it's telling you both the coldest and the hottest place it can handle. In much of the South and Southwest, the second number is the one that decides survival.
+        </div>
+
+        <h2>Why this matters more in some places than others</h2>
+        <p>In the upper Midwest and New England, cold is usually the limiting factor, and the USDA zone does most of the work. In the low desert and the Gulf South, heat does the killing, and the AHS zone matters more. A great deal of gardening disappointment comes from reading only the first map when you live in the country the second map was drawn for.</p>
+        <p>There's a third layer, too, that no national map can capture: your own yard. A south-facing brick wall, a low frost pocket, a windbreak, a patch of afternoon shade — these can move you half a zone in either direction within a single property. National maps give you the region. Your own observation gives you the garden.</p>
+
+        <h2>What to do with this</h2>
+        <ul>
+          <li><strong>Learn both your numbers.</strong> Look up your USDA hardiness zone and your AHS heat zone. Write them on the inside cover of whatever gardening book you use.</li>
+          <li><strong>Read both ends of every plant rating</strong> before you buy — not just the cold end.</li>
+          <li><strong>Trust your own yard over any map</strong> when they disagree. Maps describe averages across regions; your thermometer describes the place you actually plant.</li>
+        </ul>
+
+        <div class="article-cta">
+          <h3>Your region, in full</h3>
+          <p>The handbook devotes a chapter to each major U.S. growing region — how cold and heat, soil and rainfall combine where you live, and exactly what thrives there. Both maps, applied to your ground.</p>
+          <a class="btn btn-light" onclick="go('home');setTimeout(()=>document.getElementById('buy').scrollIntoView({behavior:'smooth'}),40)">See what's in the book</a>
+        </div>
+        <p style="font-size:13.5px;color:var(--text-light);font-family:var(--sans);">This article is general educational information. For guidance calibrated to your exact location, your state's Cooperative Extension service is free and excellent.</p>
+      </div>
+    </div>
+  </article>
+</div>
+
+<!-- ================= ARTICLE: SOIL ================= -->
+<div id="article-soil" class="view">
+  <article class="article">
+    <div class="narrow">
+      <span class="back" onclick="go('articles')">← All articles</span>
+      <div class="eyebrow">Soil</div>
+      <h1>The Soil Test That Prevents Most Failures</h1>
+      <div class="meta">By L. H. Smith · About a 6-minute read</div>
+      <div class="article-body">
+        <p>Here is the least glamorous, highest-return thing you can do as a gardener, and hardly anyone does it: send a cup of your dirt to a laboratory before you plant. For a small fee, a soil test turns the invisible half of your garden — the part doing most of the work — into a page of numbers you can actually act on.</p>
+
+        <h2>Why guessing doesn't work</h2>
+        <p>You can't see pH. You can't see a phosphorus surplus or a magnesium shortage. You can't see lead, which matters enormously if you're growing food near an older house or a former roadside. Soil looks like soil. Two beds that appear identical can behave completely differently, and no amount of experience lets you read those differences by eye.</p>
+        <p>So gardeners do the reasonable thing: they add a bit of everything. General fertilizer, some lime, some compost, a handful of whatever the garden center recommended. Sometimes it helps. Sometimes it makes a real problem worse — lime on soil that was already alkaline, nitrogen on soil that was short of something else entirely.</p>
+
+        <h2>What the test actually tells you</h2>
+        <div class="figure">
+          <svg viewBox="0 0 560 150" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A soil pH scale from acidic to alkaline with the range most plants prefer">
+            <defs>
+              <linearGradient id="ph" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#D24E42"/><stop offset="0.4" stop-color="#F4D77A"/>
+                <stop offset="0.55" stop-color="#A7CBB5"/><stop offset="0.7" stop-color="#6E9AC4"/>
+                <stop offset="1" stop-color="#4A5B9E"/>
+              </linearGradient>
+            </defs>
+            <rect x="30" y="40" width="500" height="30" rx="4" fill="url(#ph)"/>
+            <g font-family="Poppins, sans-serif" font-size="11" fill="#6B6A63" text-anchor="middle">
+              <text x="30" y="92">4.0</text><text x="155" y="92">5.5</text>
+              <text x="280" y="92">6.5</text><text x="405" y="92">7.5</text><text x="530" y="92">9.0</text>
+              <text x="80" y="28" fill="#A15E32" font-weight="600">ACIDIC</text>
+              <text x="480" y="28" fill="#4A5B9E" font-weight="600">ALKALINE</text>
+            </g>
+            <rect x="230" y="34" width="130" height="42" rx="4" fill="none" stroke="#2C4A3B" stroke-width="2.5"/>
+            <text x="295" y="120" font-family="Poppins, sans-serif" font-size="12" font-weight="600" fill="#2C4A3B" text-anchor="middle">Most garden plants: pH 6.0–7.0</text>
+          </svg>
+          <figcaption>pH controls which nutrients your plants can actually absorb. Most struggle outside the boxed range — even when the nutrients are physically present in the soil.</figcaption>
+        </div>
+        <p>A basic report usually gives you <strong>pH</strong> (how acidic or alkaline the soil is), the levels of key nutrients like phosphorus and potassium, and your <strong>organic matter</strong> percentage. Better ones add tailored recommendations: exactly how much of what to add, for the specific crop you name.</p>
+        <p>pH is the one that quietly runs everything. It doesn't feed plants directly; it decides how much of the food already in your soil they can reach. Iron can be abundant and still locked away from the plant if the pH is wrong — which is why a plant can starve in soil that a lab report shows is full of nutrients.</p>
+
+        <h2>Where to get one — and why the source matters</h2>
+        <p>Skip the plastic probe from the hardware store; the cheap ones are notoriously unreliable. Instead, use your state's <strong>Cooperative Extension service</strong>, run through its land-grant university. Nearly every state has one. They'll tell you how to pull a representative sample, mail it in, and read the results — and their recommendations are calibrated to your region's actual soils, not a national average.</p>
+        <p>The cost is typically modest — often somewhere around the price of a couple of perennials, though it varies by state and by how detailed a test you request. Against a season of plants that fail for a reason you could have known in advance, it's the best money in gardening.</p>
+
+        <div class="callout">
+          <div class="callout-h">A quick test you can do today</div>
+          Squeeze a handful of moist (not wet) soil and try to roll it into a ribbon between thumb and finger. Barely holds together? Sandy — drains fast, dries out. A short ribbon that cracks? A balanced loam. A long, bendy ribbon? Heavy clay — holds water and nutrients, but compacts. It won't give you pH, but it tells you how your soil handles water, which shapes nearly every other decision.
+        </div>
+
+        <h2>The habit worth building</h2>
+        <p>Test a new bed before you plant it, and re-test an established one every few years — sooner if things start underperforming. Soil changes: it acidifies over time in rainy climates, drifts alkaline in dry ones, and shifts with everything you add. A test every two or three years keeps you working from facts instead of hope.</p>
+
+        <div class="article-cta">
+          <h3>Read your report like a pro</h3>
+          <p>An entire section of the handbook walks through a real soil report line by line — what each number means, how to correct pH safely, and how to build lasting fertility for your region's soil.</p>
+          <a class="btn btn-light" onclick="go('home');setTimeout(()=>document.getElementById('buy').scrollIntoView({behavior:'smooth'}),40)">See what's in the book</a>
+        </div>
+        <p style="font-size:13.5px;color:var(--text-light);font-family:var(--sans);">General educational information. Your state's Cooperative Extension office offers soil testing and can interpret your specific results for free or at low cost.</p>
+      </div>
+    </div>
+  </article>
+</div>
+
+<!-- ================= ARTICLE: WATER ================= -->
+<div id="article-water" class="view">
+  <article class="article">
+    <div class="narrow">
+      <span class="back" onclick="go('articles')">← All articles</span>
+      <div class="eyebrow">Technique</div>
+      <h1>Water Deeply, Not Often</h1>
+      <div class="meta">By L. H. Smith · About a 5-minute read</div>
+      <div class="article-body">
+        <p>Most people water their gardens the way they'd want to be watered: a little, often, especially when it's hot. It feels caring. It's also, for established plants, close to the worst thing you can do — and the reason so many gardens wilt the moment someone goes away for a week.</p>
+
+        <h2>Roots grow toward water</h2>
+        <p>A plant builds its root system wherever it reliably finds moisture. Water lightly every evening and you keep the top inch or two of soil damp — so that's exactly where the roots stay. You've trained a shallow, surface-bound root system that depends entirely on you and can't survive a single missed day.</p>
+        <p>Water deeply and less often, and moisture penetrates well below the surface. The roots follow it down, building a deep network that reaches reserves the summer sun never touches. That plant can shrug off a hot, dry week — and a forgotten weekend.</p>
+
+        <div class="figure">
+          <svg viewBox="0 0 520 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Comparison of shallow roots from frequent watering versus deep roots from deep watering">
+            <!-- shallow -->
+            <g>
+              <rect x="20" y="30" width="220" height="160" rx="4" fill="#EFE7D3"/>
+              <rect x="20" y="30" width="220" height="26" fill="#CBB994" opacity="0.7"/>
+              <path d="M130 34 v10 M130 44 q-14 8 -26 12 M130 44 q14 8 26 12 M130 52 q-8 6 -16 9 M130 52 q8 6 16 9" stroke="#6E5A34" stroke-width="2" fill="none"/>
+              <path d="M118 34 q6 -14 12 0 q6 -14 12 0" stroke="#3E7A4E" stroke-width="3" fill="none"/>
+              <text x="130" y="210" font-family="Poppins, sans-serif" font-size="12" font-weight="600" fill="#A15E32" text-anchor="middle">Frequent &amp; shallow</text>
+            </g>
+            <!-- deep -->
+            <g>
+              <rect x="280" y="30" width="220" height="160" rx="4" fill="#EFE7D3"/>
+              <rect x="280" y="30" width="220" height="26" fill="#CBB994" opacity="0.7"/>
+              <path d="M390 34 v14 M390 48 q-16 14 -22 34 M390 48 q16 14 22 34 M390 62 q-24 20 -30 46 M390 62 q24 20 30 46 M390 80 q-12 24 -16 52 M390 80 q12 24 16 52 M390 100 q-6 20 -8 40 M390 100 q6 20 8 40" stroke="#6E5A34" stroke-width="2" fill="none"/>
+              <path d="M378 34 q6 -14 12 0 q6 -14 12 0" stroke="#3E7A4E" stroke-width="3" fill="none"/>
+              <text x="390" y="210" font-family="Poppins, sans-serif" font-size="12" font-weight="600" fill="#2C4A3B" text-anchor="middle">Deep &amp; infrequent</text>
+            </g>
+          </svg>
+          <figcaption>Same plant, two watering habits. The roots grow to match where the water is.</figcaption>
+        </div>
+
+        <h2>What "deeply" actually means</h2>
+        <p>The goal is to moisten the soil to the depth of the plant's roots, then let the top few inches dry out before you water again. That drying period is not neglect — it pulls air into the soil and signals the roots to keep reaching. Constantly saturated soil, by contrast, suffocates roots and invites rot.</p>
+        <p>A rough starting point for many established gardens and lawns is about an inch of water a week, from rain or hose combined, delivered in one or two good soakings rather than seven light sprinkles. But "an inch a week" is a national average pretending to be a rule. Sandy soil drains fast and wants smaller, more frequent drinks; clay holds water and wants less. Your climate, your season, and your soil all move the number.</p>
+
+        <div class="callout">
+          <div class="callout-h">How to check depth</div>
+          After watering, push a screwdriver or a wooden dowel into the soil. It slides easily through moist ground and stops where the soil is dry. That's a free, instant read on how deep your water actually went — far more reliable than guessing from the surface.
+        </div>
+
+        <h2>The exceptions worth knowing</h2>
+        <p>Seedlings and brand-new transplants haven't built deep roots yet, so they genuinely do need lighter, more frequent watering until they establish — usually a few weeks. Container plants dry out fast and often need daily attention in summer heat. The deep-and-infrequent rule is about <em>established</em> plants in the ground, which is most of your garden most of the time.</p>
+        <p>Water in the early morning when you can, so leaves dry quickly and less is lost to evaporation. And water the soil, not the foliage — wet leaves overnight are an open invitation to disease.</p>
+
+        <div class="article-cta">
+          <h3>Watering, by region and season</h3>
+          <p>How much and how often depends heavily on where you garden. The handbook's regional chapters include watering guidance tuned to each part of the country — including the winter watering that keeps evergreens alive in dry-winter zones.</p>
+          <a class="btn btn-light" onclick="go('home');setTimeout(()=>document.getElementById('buy').scrollIntoView({behavior:'smooth'}),40)">See what's in the book</a>
+        </div>
+        <p style="font-size:13.5px;color:var(--text-light);font-family:var(--sans);">General educational information. Local watering needs vary widely; your state's Cooperative Extension service can advise for your soil and climate.</p>
+      </div>
+    </div>
+  </article>
+</div>
+
+<!-- ================= CONTACT ================= -->
+<div id="contact" class="view">
+  <section class="band" style="background:var(--cream);padding-bottom:44px;">
+    <div class="wrap">
+      <div class="eyebrow">Get in touch</div>
+      <h1 style="font-size:44px;font-weight:700;margin:14px 0 14px;max-width:20ch;">Contact</h1>
+      <p style="font-size:19px;color:var(--text-light);max-width:52ch;margin:0;">Questions about the book, bulk orders, or anything else — reach out directly.</p>
+    </div>
+  </section>
+  <section class="band" style="padding-top:44px;">
+    <div class="narrow">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:48px;">
+        <div>
+          <div class="eyebrow" style="margin-bottom:12px;">Email</div>
+          <a href="mailto:lhsmith@botanicalhomegarden.com" style="font-family:var(--serif);font-size:20px;font-weight:600;color:var(--forest);word-break:break-all;">lhsmith@botanicalhomegarden.com</a>
+          <p style="font-size:15px;color:var(--text-light);margin-top:10px;">Replies within 1–2 business days.</p>
+        </div>
+        <div>
+          <div class="eyebrow" style="margin-bottom:12px;">YouTube</div>
+          <a href="https://www.youtube.com/@BotanicalHomeGarden" target="_blank" style="font-family:var(--serif);font-size:20px;font-weight:600;color:var(--forest);">@BotanicalHomeGarden</a>
+          <p style="font-size:15px;color:var(--text-light);margin-top:10px;">Zone-accurate gardening videos, every week.</p>
+        </div>
+      </div>
+      <div style="border-top:1px solid var(--rule);padding-top:36px;">
+        <div class="eyebrow" style="margin-bottom:16px;">Get the book</div>
+        <p style="font-size:17px;color:var(--text-light);max-width:48ch;margin-bottom:20px;">267 pages of region-specific gardening guidance — every claim traced to university research.</p>
+        <a class="btn btn-primary" onclick="go('home');setTimeout(()=>document.getElementById('buy').scrollIntoView({behavior:'smooth'}),40)">Get the handbook — $19.99</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div style="max-width:300px;">
+        <div class="foot-brand">Gardening <span>Where You Are</span></div>
+        <p style="margin-top:12px;line-height:1.6;">American regional gardening, zone by zone — every claim traced to university research. By L. H. Smith.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Explore</h5>
+        <a onclick="go('home')">Home</a>
+        <a onclick="go('articles')">Free articles</a>
+        <a onclick="go('contact')">Contact</a>
+        <a onclick="go('home');setTimeout(()=>document.getElementById('buy').scrollIntoView({behavior:'smooth'}),40)">Get the book</a>
+      </div>
+      <div class="foot-col">
+        <h5>Free articles</h5>
+        <a onclick="openArticle('zones')">Hardiness &amp; heat zones</a>
+        <a onclick="openArticle('soil')">The soil test</a>
+        <a onclick="openArticle('water')">Deep watering</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> L. H. Smith. All rights reserved.</span>
+      <span>Educational content · Consult your state Cooperative Extension for local guidance.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // zone colors, cold -> warm
+  const ZONES = ["#4A5B9E","#5B7BB4","#6E9AC4","#86B6C9","#A7CBB5","#C6DCA0","#E4E58C","#F4D77A","#F2B866","#EC9455","#E1704A","#D24E42","#B93838"];
+  const TEMPS = ["−60°F","−50°F","−40°F","−30°F","−20°F","−10°F","0°F","10°F","20°F","30°F","40°F","50°F","+65°F"];
+  const strip = document.getElementById('zoneStrip');
+  ZONES.forEach((c,i)=>{
+    const d=document.createElement('div');
+    d.className='z'; d.style.background=c; d.textContent=i+1;
+    d.title = 'Zone '+(i+1)+' · avg. coldest night near '+TEMPS[i];
+    strip.appendChild(d);
+  });
+
+  // article card thumbnails = zone bands / motifs
+  function paintThumb(el, colors){
+    if(!el) return;
+    el.style.display='flex';
+    colors.forEach(c=>{const s=document.createElement('div');s.style.flex='1';s.style.background=c;el.appendChild(s);});
+  }
+  const warm=["#E4E58C","#F4D77A","#F2B866","#EC9455","#E1704A"];
+  const cool=["#4A5B9E","#5B7BB4","#6E9AC4","#86B6C9","#A7CBB5"];
+  const soil=["#6E5A34","#8A7346","#A98C57","#C7B07A","#E0CE9A"];
+  ['thumb-zones','thumb-zones2'].forEach(id=>paintThumb(document.getElementById(id), ZONES));
+  ['thumb-soil','thumb-soil2'].forEach(id=>paintThumb(document.getElementById(id), soil));
+  ['thumb-water','thumb-water2'].forEach(id=>paintThumb(document.getElementById(id), cool));
+
+  const VIEWS = ['home','about','articles','article-zones','article-soil','article-water','contact'];
+  function setActiveNav(name){
+    document.querySelectorAll('.nav-links a[data-nav]').forEach(a=>{
+      a.classList.toggle('active', a.getAttribute('data-nav')===name);
+    });
+  }
+  function go(name){
+    VIEWS.forEach(v=>document.getElementById(v).classList.toggle('active', v===name));
+    document.getElementById('navlinks').classList.remove('open');
+    setActiveNav(['home','about','articles','contact'].includes(name)?name:'articles');
+    window.scrollTo({top:0,behavior:'instant' in window ? 'instant':'auto'});
+  }
+  function openArticle(key){ go('article-'+key); }
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
